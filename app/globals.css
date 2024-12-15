@@ -2,20 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.bg-pastel-cream {
+  background-color: #FDF1DC;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.bg-pastel-blue {
+  background-color: #A6DCEF;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.text-pastel-pink {
+  color: #FFC1CC;
+}
+
+.text-pastel-green {
+  color: #D6EFC7;
+}
+
+.text-pastel-yellow {
+  color: #FFE5B4;
+}
+
+.bg-pastel-purple {
+  background-color: #C5B4E3;
+}
+
+.hover\:bg-pastel-pink:hover {
+  background-color: #FFC1CC;
 }
