@@ -66,6 +66,10 @@ export default function Dailypill() {
                 messages: [{ role: "user", content: prompt }],
                 model: "llama3-8b-8192"
             });
+
+            console.log("Fetched data:", data);
+            console.log("Generated prompt:", prompt);
+            console.log("AI Response:", completion);
         
             setAiResults(completion.choices[0].message.content as string);
         }
@@ -73,6 +77,21 @@ export default function Dailypill() {
         
         generateAIChat();
     }, [data])
+
+    useEffect(() => {
+        if (!user) return;
+        
+        const fetchData = async () => {
+            const q = query(
+                collection(db, "daily"),
+                where("userEmail", "==", user?.email)
+            );
+            const querySnapshot = await getDocs(q);
+            const _data: DocumentData[] = querySnapshot.docs.map(doc => doc.data());
+            setData(_data);
+        };
+        fetchData();
+    }, [user]);
 
     useEffect(() => {
     onAuthStateChanged(auth, async (u) => {
@@ -97,14 +116,6 @@ export default function Dailypill() {
             router.push('/auth/signin');
         }
     });
-
-    const fetchData = async () => {
-        const q = query(collection(db, "daily"));
-        const querySnapshot = await getDocs(q);
-        const _data: DocumentData[] = querySnapshot.docs.map(doc => doc.data());
-        setData(_data);
-    };
-    fetchData();
 }, []);
 
 const getTileContent = ({ date, view }: { date: Date, view: string }) => {
