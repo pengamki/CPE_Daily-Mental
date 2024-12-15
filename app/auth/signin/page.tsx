@@ -18,17 +18,17 @@ export default function GoogleLoginPage() {
     }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-pastel-blue">
-      <div className="flex flex-col justify-center items-center p-4 bg-white rounded-lg shadow-lg">
+    <div className="flex justify-center items-center h-screen bg-pastel-cream">
+      <div className="flex flex-col justify-center items-center p-4 rounded-lg">
         <div className="mb-4">
-          <h1 className="text-2xl font-bold text-pastel-pink">Daily Form</h1>
+          <h1 className="text-3xl font-bold">Daily Mental Health Form</h1>
         </div>
         <div className="mb-4">
           <button
             onClick={handleGoogleLogin}
-            className="text-xl bg-pastel-purple text-white px-4 py-2 rounded-full hover:bg-pastel-pink"
+            className="text-xl px-4 py-2 rounded-full hover:bg-pastel-pink border border-black"
           >
-            Log in via Google
+            Take your pill
           </button>
         </div>
       </div>
