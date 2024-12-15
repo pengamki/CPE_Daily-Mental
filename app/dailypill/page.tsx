@@ -80,7 +80,7 @@ export default function Dailypill() {
 
     useEffect(() => {
         if (!user) return;
-        
+
         const fetchData = async () => {
             const q = query(
                 collection(db, "daily"),

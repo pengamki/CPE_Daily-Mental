@@ -109,7 +109,7 @@ const Page = () => {
     <div>
       <Navbar user={user} />
       <div className="flex justify-center items-center h-screen bg-pastel-cream">
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
         <h1 className="text-3xl font-bold mb-10 text-center">How are you today?</h1>
 
         <div key={1} className="mb-6">

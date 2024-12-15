@@ -20,7 +20,11 @@ export default function GoogleLoginPage() {
   return (
     <div className="flex justify-center items-center h-screen bg-pastel-cream">
       <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <div className="mb-4">
+        
+        <div className="mb-6">
+          <img src="/images/DailyPill.png" width={150} height={150}  alt="DailyPill" />
+        </div>
+        <div className="mb-4 flex justify-center items-center">
           <h1 className="text-3xl font-bold">Daily Mental Health Form</h1>
         </div>
         <div className="mb-4">

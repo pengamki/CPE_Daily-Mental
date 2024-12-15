@@ -12,7 +12,7 @@ interface Props {
 
 export default function Navbar({ user }: Props) {
     const router = useRouter()
-
+    
   return (
     <div className='bg-white h-16 flex justify-evenly items-center'>
         <div className='flex items-center'>
